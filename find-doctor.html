@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابحثي عن طبيب | شريان الأمل</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+/* الكود الجديد المبسط */
+.credit-line {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 15px;
+}
+        body { font-family: 'Cairo', sans-serif; background-color: #fef9f9; }
+        .navbar { background-color: #ffffff; border-bottom: 1px solid #eee; }
+        .navbar-brand { font-weight: 700; color: #d63384 !important; }
+        .page-header { background-color: #f8d7da; padding: 60px 0; text-align: center; color: #58151c; }
+        .page-header h1 { font-weight: 700; }
+        .governorate-title {
+            font-weight: 700;
+            color: #3e3e3e;
+            border-bottom: 2px solid #d63384;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        .provider-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        .provider-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .provider-card h5 {
+            font-weight: 700;
+            color: #d63384;
+        }
+        .provider-card p {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .footer { background-color: #3e3e3e; color: white; padding: 40px 0; text-align: center; }
+        .footer p { margin: 0; }
+        .footer .disclaimer { font-size: 0.9rem; color: #ccc; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">شريان الأمل</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learn-more.html">اعرفي أكثر</a></li>
+                    <li class="nav-item"><a class="nav-link" href="self-exam-guide.html">دليل الفحص الذاتي</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hope-stories.html">قصص الأمل</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="find-doctor.html">ابحثي عن طبيب</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>دليل الأطباء والمراكز الطبية</h1>
+            <p class="lead">قائمة بالمستشفيات والمراكز المتخصصة التي يمكنكِ اللجوء إليها للاستشارة والفحص.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="alert alert-warning">
+            <strong>تنويه:</strong> هذه القائمة هي دليل استرشادي. ننصح دائمًا بالبحث والتأكد من اختيار الطبيب أو المركز الأنسب لحالتك.
+        </div>
+
+        <h2 class="governorate-title">محافظة القاهرة</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="provider-card">
+                    <h5>المعهد القومي للأورام</h5>
+                    <p><strong>العنوان:</strong> شارع قصر العيني، فم الخليج، السيدة زينب.</p>
+                    <p><strong>الهاتف:</strong> 0223687399</p>
+                    <a href="tel:0223687399" class="btn btn-outline-success btn-sm">اتصال الآن</a>
+                    <a href="https://maps.google.com/?q=المعهد+القومي+للأورام+القاهرة" target="_blank" class="btn btn-outline-primary btn-sm">عرض على الخريطة</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="provider-card">
+                    <h5>مؤسسة بهية للاكتشاف المبكر وعلاج سرطان الثدي</h5>
+                    <p><strong>العنوان:</strong> 4 شارع علوبة، الهرم، الجيزة.</p>
+                    <p><strong>الخط الساخن:</strong> 16602</p>
+                    <a href="tel:16602" class="btn btn-outline-success btn-sm">اتصال الآن</a>
+                    <a href="https://maps.google.com/?q=مؤسسة+بهية+الهرم" target="_blank" class="btn btn-outline-primary btn-sm">عرض على الخريطة</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="governorate-title">محافظة الإسكندرية</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="provider-card">
+                    <h5>مركز أورام مستشفى جامعة الإسكندرية (الأميري)</h5>
+                    <p><strong>العنوان:</strong> شارع بورسعيد، الشاطبي، الإسكندرية.</p>
+                    <p><strong>الهاتف:</strong> (يمكنك إضافة الرقم هنا)</p>
+                    <a href="#" class="btn btn-outline-success btn-sm">اتصال الآن</a>
+                    <a href="https://maps.google.com/?q=مستشفى+جامعة+الإسكندرية+الأميري" target="_blank" class="btn btn-outline-primary btn-sm">عرض على الخريطة</a>
+                </div>
+            </div>
+        </div>
+
+        </main>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <p>&copy; 2025 شريان الأمل. جميع الحقوق محفوظة.</p>
+<p class="credit-line">Created by Marwan Ibrahim</p>
+            <p class="disclaimer"><strong>إخلاء مسؤولية هام:</strong> المحتوى المنشور في هذا الموقع هو لأغراض التوعية والمعلومات فقط ولا يغني إطلاقًا عن استشارة الطبيب المختص.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -34,6 +34,46 @@
         .stat-section h3 { font-weight: 700; font-size: 2rem; }
         .footer { background-color: #3e3e3e; color: white; padding: 40px 0; text-align: center; }
         .credit-line { font-size: 0.9rem; color: #aaa; margin-top: 15px; }
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* خلفية داكنة جداً */
+    color: #f1f1f1; /* نص فاتح اللون */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .nav-link {
+    color: #f1f1f1 !important;
+}
+
+body.dark-mode .feature-card,
+body.dark-mode .story-card,
+body.dark-mode .provider-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid #333;
+}
+
+body.dark-mode .page-header {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+body.dark-mode .section-title,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h5 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .footer {
+    background-color: #1e1e1e;
+}
     </style>
 </head>
 <body>
@@ -54,6 +94,10 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link fw-bold" href="index.html">العربية</a></li>
+                             <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+        <a class="nav-link" id="darkModeToggle" href="#" style="font-size: 1.2rem;">🌙</a>
+    </li>  
                 </ul>
             </div>
         </div>
@@ -102,5 +146,39 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const darkModeKey = 'darkMode';
+
+    // Function to enable dark mode
+    const enableDarkMode = () => {
+        body.classList.add('dark-mode');
+        darkModeToggle.textContent = '☀️'; // Sun icon
+        localStorage.setItem(darkModeKey, 'enabled');
+    };
+
+    // Function to disable dark mode
+    const disableDarkMode = () => {
+        body.classList.remove('dark-mode');
+        darkModeToggle.textContent = '🌙'; // Moon icon
+        localStorage.setItem(darkModeKey, 'disabled');
+    };
+
+    // Check localStorage on page load
+    if (localStorage.getItem(darkModeKey) === 'enabled') {
+        enableDarkMode();
+    }
+
+    // Toggle dark mode on button click
+    darkModeToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (body.classList.contains('dark-mode')) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+    });
+</script>
 </body>
 </html>
